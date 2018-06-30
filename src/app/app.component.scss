@@ -1,0 +1,32 @@
+app-menu {
+    z-index: 3;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 22.5%;
+    height: 100vh;
+    overflow: hidden;
+    border: 16px solid transparent;
+    box-sizing: border-box;
+    @media only screen and (max-width: 1024px) {
+        left: 100%;
+        width: 100%;
+        z-index: 5;
+    }
+}
+
+app-sidebar {
+    position: absolute;
+    box-sizing: border-box;
+    height: 100vh;
+    top: -16px;
+    overflow: hidden;
+    left: 16px;
+    width: 100%;
+    z-index: 1;
+    @media only screen and (max-width: 1024px) {
+        left: 300px;
+        z-index: 4;
+        border: none;
+    }
+}

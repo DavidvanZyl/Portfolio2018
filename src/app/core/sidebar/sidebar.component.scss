@@ -1,0 +1,19 @@
+@import './../../scss/variables';
+
+.sidebar {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    
+    @for $i from -3 through -1 {
+        &__gradient#{abs($i)} {
+            $abs: abs($i);
+            background-color: rgba($color: $primary, $alpha: calc(1.5 / (#{$abs} + 1)));
+            clip-path: inset( 0 0 0 calc(100% - (100px * #{$abs})));
+            height: 100%;
+            width: 100%;
+            position: absolute;
+        }
+    } 
+
+}

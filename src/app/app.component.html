@@ -1,0 +1,10 @@
+<div id="particles-js"></div>
+<input #Nav type="checkbox" name="navToggle" id="navToggle">
+<label for="navToggle" id="navLabel"></label>
+<app-menu [nav]=Nav ></app-menu>
+<div class="main" [@animRoutes]="getPage(appOutlet)">
+    <router-outlet #appOutlet="outlet"></router-outlet>
+</div>
+<app-sidebar></app-sidebar>
+<script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script src="vendor/particle.js"></script>
